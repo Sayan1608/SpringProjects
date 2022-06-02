@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.springcore.Student" name="student1">
+		<property name="name" value="Sayan" />
+		<property name="email" value="subhosen16@gmail.com" />
+		<property name="address" value="Durgapur" />
+		<property name="phoneNum" value="8900309900" />
+	</bean>
+
+
+	<bean class="com.springcore.Student" name="student2">
+		<property name="name" value="Ram" />
+		<property name="email" value="ram@gl.com" />
+		<property name="address" value="Kolkata" />
+		<property name="phoneNum" value="7908650179" />
+	</bean>
+
+	<bean class="com.springcore.Student" name="student3"
+		p:name="Shirsendu" p:email="shirsendu@gl.com" p:address="Delhi"
+		p:phoneNum="15895552" />
+		
+	<bean class="com.springcore.Student" name="student4">
+		<property name="name">
+			<value>Ratan</value>
+		</property>
+		
+		<property name="email">
+			<value>ratan123@gmail.com</value>
+		</property>
+		
+		<property name="address">
+			<value>Mumbai</value>
+		</property>
+		
+		<property name="phoneNum">
+			<value>8697562481</value>
+		</property>
+	</bean>
+
+</beans>
