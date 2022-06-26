@@ -14,5 +14,5 @@ public interface StudentService {
 
 	public void deleteById(int theId);
 
-	public void updateStudent(Student theStudent);
+//	public void updateStudent(Student theStudent);
 }

@@ -52,12 +52,14 @@ public class StudentController {
 		return "Student-form";
 	}
 
-	@PostMapping("/save")
+	@RequestMapping("/save")
 	public String saveStudent(@RequestParam("studentId") int studentId, @RequestParam("studentName") String studentName,
 			@RequestParam("department") String department, @RequestParam("country") String country) {
 
-	if (!studentName.equals("") || !department.equals("") || !country.equals("")) {
-		Student student = null;
+		System.out.println("Saving Student");
+		
+		Student student ;
+		
 		if (studentId != 0) {
 			student = studentService.findById(studentId);
 			student.setStudentName(studentName);
@@ -66,11 +68,13 @@ public class StudentController {
 		} else {
 			student = new Student(studentName, department, country);
 		}
+
+		
+
 		studentService.saveStudent(student);
-		return "redirect:/list-Students";
-	} else {
-		return "redirect:/showFormForAdd";
-	}
+
+		System.out.println("saved");
+		return "redirect:/student/list";
 	}
 
 	@RequestMapping("/delete")

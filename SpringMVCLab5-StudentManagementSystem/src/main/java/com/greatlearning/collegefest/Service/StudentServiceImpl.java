@@ -54,13 +54,12 @@ public class StudentServiceImpl implements StudentService {
 		// TODO Auto-generated method stub
 
 		Transaction tx = session.beginTransaction();
-
+		tx.commit();
 		return session.get(Student.class, theId);
 
 	}
 
 	@Override
-	@Transactional
 	public void saveStudent(Student theStudent) {
 		// TODO Auto-generated method stub
 
@@ -84,22 +83,22 @@ public class StudentServiceImpl implements StudentService {
 
 	}
 
-	@Override
-	@Transactional
-	public void updateStudent(Student theStudent) {
-		// TODO Auto-generated method stub
-
-		Transaction tx = session.beginTransaction();
-
-		Student student = session.get(Student.class, theStudent.getStudentId());
-
-		student.setStudentName(theStudent.getStudentName());
-		student.setDepartment(theStudent.getDepartment());
-		student.setCountry(theStudent.getCountry());
-
-		session.save(student);
-		tx.commit();
-
-	}
+//	@Override
+//	@Transactional
+//	public void updateStudent(Student theStudent) {
+//		// TODO Auto-generated method stub
+//
+//		Transaction tx = session.beginTransaction();
+//
+//		Student student = session.get(Student.class, theStudent.getStudentId());
+//
+//		student.setStudentName(theStudent.getStudentName());
+//		student.setDepartment(theStudent.getDepartment());
+//		student.setCountry(theStudent.getCountry());
+//
+//		session.save(student);
+//		tx.commit();
+//
+//	}
 
 }
