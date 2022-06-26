@@ -12,8 +12,8 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
  
 
-	<context:annotation-config />
-	<context:component-scan	base-package="com.studentcrudapp"></context:component-scan>
+	<context:annotation-config/>
+	<context:component-scan	base-package="com.studentcrudapp.controllers"></context:component-scan>
 	
 	 
 	

@@ -14,6 +14,10 @@ public class StudentSercviceImpl implements StudentService {
 	@Autowired
 	private StudentDao studentDao;
 
+	public void setStudentDao(StudentDao studentDao) {
+		this.studentDao = studentDao;
+	}
+
 	@Override
 	public void addStudent(Student student) {
 		// TODO Auto-generated method stub
